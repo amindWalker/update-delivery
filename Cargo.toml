@@ -1,0 +1,24 @@
+[package]
+name = "update_delivery"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "update_delivery"
+
+[dependencies]
+actix-web = "4.0.1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+reqwest = "0.11.10"
+sqlx = "0.5.13"
+serde = "1.0.137"
+config = { version = "0.13.1", default-features = false, features = ["yaml"] }
+sqlx = { version = "0.5.13", default-features = false, features = ["runtime-actix-rustls", "macros", "postgres", "uuid", "chrono", "migrate"] }
+uuid = "1.0.0"
+chrono = "0.4.19"
